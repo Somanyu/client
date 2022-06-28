@@ -25,7 +25,7 @@ export default function Create() {
 
         const record = { ...updateData };
 
-        await fetch("http://localhost:5000/record/add", {
+        await fetch("https://mernserver3.herokuapp.com/record/add", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

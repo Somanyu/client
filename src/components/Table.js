@@ -29,7 +29,7 @@ export default function RecordList() {
 
     useEffect(() => {
         async function getData() {
-            const res = await fetch(`http://localhost:5000/record/`);
+            const res = await fetch(`https://mernserver3.herokuapp.com/record/`);
 
             if (!res.ok) {
                 return;
@@ -45,7 +45,7 @@ export default function RecordList() {
     }, [person.length]);
 
     async function deleteData(id) {
-        await fetch(`http://localhost:5000/${id}`, {
+        await fetch(`https://mernserver3.herokuapp.com/${id}`, {
             method: "DELETE"
         });
 

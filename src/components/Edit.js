@@ -17,7 +17,7 @@ export default function Edit() {
     useEffect(() => {
         async function fetchData() {
             const id = params.id.toString();
-            const res = await fetch(`http://localhost:5000/record/${params.id.toString()}`);
+            const res = await fetch(`https://mernserver3.herokuapp.com/record/${params.id.toString()}`);
 
             if (!res.ok) {
                 return;
@@ -54,7 +54,7 @@ export default function Edit() {
             profession: updateData.profession,
         };
 
-        await fetch(`http://localhost:5000/update/${params.id}`, {
+        await fetch(`https://mernserver3.herokuapp.com/update/${params.id}`, {
             method: "POST",
             body: JSON.stringify(update),
             headers: {
